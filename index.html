@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>电影展示</title>
+    <link rel="stylesheet" href="./src/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./src/assets/css/wap.css">
+</head>
+<!--
+1. 先按照功能划分模块.
+   
+   首页模块
+   正在上映
+   即将上映
+   top250模块
+   电影详情
+
+   为每一个模块创建1个文件夹.
+   用来分别保存每一个模块相关的视图 控制器.
+
+   
+    
+-->
+
+<body ng-app="moviecat">
+    <!-- 顶部导航栏开始 -->
+    <div class="top">
+        <div class="header">
+            <a href="#/home_page"><img src="./src/assets/img/logo.png" alt=""></a>
+            <div class="search">
+                <input class="my-input" type="text" placeholder="电影搜索" ng-model="search">
+                <button ng-click="sousuo()">搜索</button>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <!--li中添加 active 类样式，显示焦点状态。-->
+                <li heima-active class="active "><a href="#/home">首页</a></li>
+                <li heima-active><a href="#/in_theaters/1/zhengzai">正在热映</a></li>
+                <li heima-active><a href="#/coming_soon/1/jijiang">即将上映</a></li>
+                <li heima-active><a href="#/top250/1/Top250">Top250</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- 顶部导航栏结束 -->
+    <div class="container" ng-view>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>版权所有&copy; 随时</p>
+        </div>
+    </footer>
+
+    <script src="./src/assets/js/prefixfree.min.js"></script>
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="./src/app.js"></script>
+    <script type="text/javascript" src="./src/home/home.js"></script>
+    <script type="text/javascript" src="./src/service/JSON.js"></script>
+    <script type="text/javascript" src="./src/in_theaters/in_theaters.js"></script>
+    <script type="text/javascript" src="./src/details/details.js"></script>
+</body>
+
+</html>

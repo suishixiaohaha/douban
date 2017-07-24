@@ -24,10 +24,10 @@
 
         $rootScope.query = function() {
             // 获取到要搜索的内容,用双向绑定的值
-            // console.log($rootScope.keyword)
-            $window.location.hash = "#/search/q=" + $scope.keyword;
+            // console.log($rootScope.search)
+            $location.path('/search/1/search/q=' + $rootScope.search);
             // 搜索后变为空
-            $rootScope.search = "";
+            // $rootScope.search = "";
         };
     }]);
 

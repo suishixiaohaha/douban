@@ -21,13 +21,12 @@
 
 
     app.run(['$rootScope', "$location", function($rootScope, $location) {
-
-        $rootScope.query = function() {
+        $rootScope.sousuo = function() {
             // 获取到要搜索的内容,用双向绑定的值
-            // console.log($rootScope.search)
+            console.log($rootScope.search)
             $location.path('/search/1/search/q=' + $rootScope.search);
             // 搜索后变为空
-            // $rootScope.search = "";
+            $rootScope.search = "";
         };
     }]);
 

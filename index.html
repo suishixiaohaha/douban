@@ -29,8 +29,10 @@
         <div class="header">
             <a href="#/home_page"><img src="./src/assets/img/logo.png" alt=""></a>
             <div class="search">
-                <input class="my-input" type="text" placeholder="电影搜索" ng-model="search">
-                <button ng-click="sousuo()">搜索哈哈</button>
+                <form ng-submit="query()">
+                    <input class="my-input" type="text" placeholder="电影搜索" ng-model="keyword">
+                    <button>搜索</button>
+                </form>
             </div>
         </div>
         <nav class="nav">

@@ -15,7 +15,7 @@
         var id = $routeParams.id;
         console.log(id)
         heimaJsonp.jsonp({
-            url: "http://api.douban.com/v2/movie/subject/" + id,
+            url: "https://api.douban.com/v2/movie/subject/" + id,
             params: {},
             callback: function(data) {
                 $scope.SHOW = false;

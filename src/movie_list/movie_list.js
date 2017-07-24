@@ -33,7 +33,7 @@
         5          40
         */
         heimaJsonp.jsonp({
-            url: "http://api.douban.com/v2/movie/" + $routeParams.type,
+            url: "https://api.douban.com/v2/movie/" + $routeParams.type,
             //http://api.douban.com/v2/movie/search?q=china&count=20&strat=0
             params: {
                 count: $scope.pageSize, //20

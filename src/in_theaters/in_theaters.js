@@ -22,17 +22,17 @@
 
         // 判断路由是哪一个。不同的给不同的请求地址，其他都一样
         if ($routeParams.form == "zhengzai") {
-            $scope.url = "http://api.douban.com/v2/movie/in_theaters";
+            $scope.url = "https://api.douban.com/v2/movie/in_theaters";
             // console.log("正在热映")
         } else if ($routeParams.form == "jijiang") {
-            $scope.url = "http://api.douban.com/v2/movie/coming_soon";
+            $scope.url = "https://api.douban.com/v2/movie/coming_soon";
             // console.log("即将热映")
         } else if ($routeParams.form == "Top250") {
-            $scope.url = "http://api.douban.com/v2/movie/top250";
+            $scope.url = "https://api.douban.com/v2/movie/top250";
             // console.log("Top250")
         } else if ($routeParams.form == "search") {
             console.log($routeParams.shuzu)
-            $scope.url = "http://api.douban.com/v2/movie/search?" + $routeParams.shuzu;
+            $scope.url = "https://api.douban.com/v2/movie/search?" + $routeParams.shuzu;
 
         }
 
